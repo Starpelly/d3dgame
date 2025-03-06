@@ -7,6 +7,69 @@ enum class RendererType
 	D3D11,
 };
 
+enum class DepthCompare
+{
+	None,
+	Always,
+	Never,
+	Less,
+	Equal,
+	LessOrEqual,
+	Greater,
+	NotEqual,
+	GreaterOrEqual
+};
+
+enum class Cull
+{
+	None = 0,
+	Front = 1,
+	Back = 2,
+};
+
+enum class BlendOp
+{
+	Add,
+	Subtract,
+	ReverseSubtract,
+	Min,
+	Max
+};
+
+enum class BlendFactor
+{
+	Zero,
+	One,
+	SrcColor,
+	OneMinusSrcColor,
+	DstColor,
+	OneMinusDstColor,
+	SrcAlpha,
+	OneMinusSrcAlpha,
+	DstAlpha,
+	OneMinusDstAlpha,
+	ConstantColor,
+	OneMinusConstantColor,
+	ConstantAlpha,
+	OneMinusConstantAlpha,
+	SrcAlphaSaturate,
+	Src1Color,
+	OneMinusSrc1Color,
+	Src1Alpha,
+	OneMinusSrc1Alpha
+};
+
+enum class BlendMask
+{
+	None = 0,
+	Red = 1,
+	Green = 2,
+	Blue = 4,
+	Alpha = 8,
+	RGB = Red | Green | Blue,
+	RGBA = Red | Green | Blue | Alpha,
+};
+
 class Shader
 {
 protected:

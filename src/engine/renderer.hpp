@@ -1,5 +1,6 @@
 #pragma once
 
+#include <glm/glm.hpp>
 #include "graphics.hpp"
 
 class Renderer
@@ -18,6 +19,8 @@ public:
 	virtual void after_render() = 0;
 
 	virtual void render(const DrawCall& drawCall) = 0;
+
+	virtual void clear_backbuffer(const glm::vec4& color, float depth, uint8_t stencil) = 0;
 
 private:
 	static Renderer* try_make_opengl();
