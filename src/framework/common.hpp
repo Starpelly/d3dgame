@@ -18,7 +18,7 @@ using float32 = float;
 using float64 = double;
 
 // Scope
-namespace Engine
+namespace Framework
 {
 	template<typename T>
 	using Scope = std::unique_ptr<T>;

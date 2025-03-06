@@ -3,7 +3,7 @@
 
 #include <SDL3/SDL.h>
 
-using namespace Engine;
+using namespace Framework;
 
 void* Platform::d3d11_get_hwnd()
 {

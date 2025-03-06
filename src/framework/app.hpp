@@ -2,7 +2,7 @@
 
 #include "common.hpp"
 
-namespace Engine
+namespace Framework
 {
 	namespace App
 	{

@@ -1,6 +1,6 @@
-#include "engine/app.hpp"
+#include "framework/app.hpp"
 
-using namespace Engine;
+using namespace Framework;
 
 int main(int argc, char* argv[])
 {

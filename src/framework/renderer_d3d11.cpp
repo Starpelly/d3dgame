@@ -174,7 +174,7 @@ private:
 	}
 };
 
-namespace Engine
+namespace Framework
 {
 	class Renderer_D3D11 : public Renderer
 	{
@@ -227,7 +227,7 @@ namespace Engine
 
 DrawingSystem* test_drawer = nullptr;
 
-using namespace Engine;
+using namespace Framework;
 
 bool Renderer_D3D11::init()
 {

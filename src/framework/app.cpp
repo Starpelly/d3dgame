@@ -8,7 +8,7 @@
 #include <empscripten/html5.h>
 #endif
 
-using namespace Engine;
+using namespace Framework;
 
 namespace
 {

@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-namespace Engine
+namespace Framework
 {
 	namespace Platform
 	{
