@@ -109,7 +109,7 @@ void Internal::app_step()
         }
 
         app_renderer_api->before_render();
-        app_renderer_api->clear_backbuffer({ 0.392f, 0.584f, 0.929f, 1.0f }, 0, 0);
+        app_renderer_api->clear_backbuffer({ 0.392f, 0.584f, 0.929f, 1.0f }, 0, 0, ClearMask::Color);
         app_renderer_api->render({});
         app_renderer_api->after_render();
     }

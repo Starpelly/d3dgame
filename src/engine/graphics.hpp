@@ -70,6 +70,15 @@ enum class BlendMask
 	RGBA = Red | Green | Blue | Alpha,
 };
 
+enum class ClearMask
+{
+	None = 0,
+	Color = 1,
+	Depth = 2,
+	Stencil = 4,
+	All = (int)Color | (int)Depth | (int)Stencil
+};
+
 class Shader
 {
 protected:

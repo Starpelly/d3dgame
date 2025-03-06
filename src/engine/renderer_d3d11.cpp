@@ -185,7 +185,7 @@ namespace Engine
 		void before_render() override;
 		void after_render() override;
 		void render(const DrawCall& drawCall) override;
-		void clear_backbuffer(const glm::vec4& color, float depth, uint8_t stencil) override;
+		void clear_backbuffer(const glm::vec4& color, float depth, uint8_t stencil, ClearMask mask) override;
 
 	private:
 		ID3D11Device* device = nullptr;
@@ -422,10 +422,13 @@ void Renderer_D3D11::render(const DrawCall& pass)
 	test_drawer->Flush();
 }
 
-void Renderer_D3D11::clear_backbuffer(const glm::vec4& color, float depth, uint8_t stencil)
+void Renderer_D3D11::clear_backbuffer(const glm::vec4& color, float depth, uint8_t stencil, ClearMask mask)
 {
-	float clearColor[4] = { color.r, color.g, color.b, color.a };
-	context->ClearRenderTargetView(backBufferView, clearColor);
+	if (((int)mask & (int)ClearMask::Color) == (int)ClearMask::Color)
+	{
+		float clearColor[4] = { color.r, color.g, color.b, color.a };
+		context->ClearRenderTargetView(backBufferView, clearColor);
+	}
 }
 
 Renderer* Renderer::try_make_d3d11()
